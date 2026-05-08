@@ -4,57 +4,39 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Monet Media Productions</title>
+
     <style>
       * {
         box-sizing: border-box;
         font-family: Arial, sans-serif;
       }
 
-      html {
-        background: url(/monetmedia/img/bg.jpg);
-        background-position: center;
-        background-size: cover;
-        background-repeat: no-repeat;
-        height: 100%;
+      html,
+      body {
+        background-color: #111;
+        margin: 0;
+        width: 100%;
       }
 
-      body {
-        margin: 0;
+      .bg {
+        background: url(/img/bg.jpg);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
         display: flex;
         flex-direction: column;
         align-items: center;
-        min-height: 100vh;
-        min-height: 100dvh;
-        padding-top: env(safe-area-inset-top);
-        padding-bottom: env(safe-area-inset-bottom);
-      }
-
-      footer {
-        margin-top: auto;
+        min-height: 102svh;
         width: 100%;
-        color: ghostwhite;
-        text-align: center;
-        font-size: 10px;
-        animation: fadeIn 0.7s ease forwards;
       }
 
-      footer span {
-        color: ghostwhite;
-        font-weight: bold;
-      }
-
-      footer a {
-        color: ghostwhite;
-        text-decoration: none;
-      }
-
-      footer a:hover {
-        text-decoration: underline;
+      img {
+        max-width: 100%;
       }
 
       header {
         color: white;
-        padding: 2em;
+        padding: 2em 1em 1em;
         text-align: center;
         width: 100%;
       }
@@ -69,27 +51,30 @@
         margin: 0.5em 0 2em 0;
       }
 
-      #copyright {
-        color: ghostwhite;
-      }
-
       .links {
         width: 90%;
         max-width: 300px;
+        margin: 3em 0 0 0;
       }
 
       .link {
         display: flex;
         align-items: center;
         justify-content: center;
+
         background-color: white;
-        margin: 0.5em 0;
+
+        margin: 0.5em 0 1.5em 0;
         padding: 1em;
+
         border-radius: 8px;
+
         text-decoration: none;
         color: #222;
         font-weight: bold;
+
         transition: background 0.3s;
+
         position: relative;
       }
 
@@ -98,65 +83,113 @@
       }
 
       .link-logo {
-        position: absolute;
         left: 56px;
+        margin: 0.1em 1em 0 0;
         width: 24px;
         height: 24px;
+
         border-radius: 4px;
       }
 
       .profile-pic {
         width: 120px;
         height: 120px;
+
         border-radius: 50%;
         margin-bottom: 1em;
+
         object-fit: cover;
+
         box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+      }
+
+      footer {
+        min-width: 100svw;
+        padding: 0.5em 0 0 2em;
+        background-color: #555;
+        margin-top: auto;
+        font-size: 14px;
+        text-align: center;
+      }
+
+      footer span {
+        color: black;
+        font-weight: bold;
+      }
+
+      footer a {
+        color: ghostwhite;
+        text-decoration: none;
+      }
+
+      footer a:hover {
+        text-decoration: underline;
+      }
+
+      #copyright {
+        color: ghostwhite;
+      }
+
+      @media (max-width: 768px) {
+        h1 {
+          font-size: 1.6em;
+        }
+
+        .profile-pic {
+          width: 100px;
+          height: 100px;
+        }
+
+        .link-logo {
+          left: 40px;
+        }
       }
     </style>
   </head>
-
   <body>
-    <header>
-      <img
-        class="profile-pic"
-        src="/monetmedia/img/monet-logo.jpg"
-        alt="Profile Picture"
-      />
-      <h1>Monet Media Productions</h1>
-      <p>
-        Transformamos ideas en producciónes impactantes <br />
-        📸 Fotografía | 🎬 Producción
-      </p>
-    </header>
-
-    <div class="links">
-      <a
-        class="link"
-        href="https://instagram.com/monetmediaproductions"
-        target="_blank"
-      >
+    <div class="bg">
+      <header>
         <img
-          class="link-logo"
-          src="/monetmedia/img/whitegram-logo.png"
-          alt="Instagram logo"
+          class="profile-pic"
+          src="/img/monet-logo.jpg"
+          alt="Profile Picture"
         />
-        Instagram
-      </a>
-      <br />
 
-      <a class="link" href="tel:4133069008" target="_blank">
-        <img
-          class="link-logo"
-          src="/monetmedia/img/contact.png"
-          alt="Phone logo"
-        />
-        Contact Me
-      </a>
+        <h1>Monet Media Productions</h1>
+
+        <p>
+          Transformamos ideas en producciónes impactantes
+          <br />
+          📸 Fotografía | 🎬 Producción
+        </p>
+      </header>
+
+      <div class="links">
+        <a
+          class="link"
+          href="https://instagram.com/monetmediaproductions"
+          target="_blank"
+        >
+          <img
+            class="link-logo"
+            src="/img/whitegram-logo.png"
+            alt="Instagram logo"
+          />
+
+          Instagram
+        </a>
+
+        <a class="link" href="tel:4133069008">
+          <img class="link-logo" src="/img/contact.png" alt="Phone logo" />
+
+          Contact Me
+        </a>
+      </div>
+      <footer>
+        <p id="copyright">
+          © 2026 <span>ThriveNFC</span>. All Rights Reserved.
+        </p>
+      </footer>
     </div>
-
-    <footer>
-      <p id="copyright">© 2026 <span>ThriveNFC</span>. All Rights Reserved.</p>
-    </footer>
   </body>
 </html>
